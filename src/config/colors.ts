@@ -1,0 +1,16 @@
+export enum COLOR {
+    ACCENT = '#FF5253',
+    DARK = '#363636',
+    WHITE = '#FFFFFF',
+    DARK_LIGHT = 'rgba(54, 54, 54, 0.3)',
+    GREY = '#727272',
+    GREY_BLACK1 = '#A7A7A7',
+    GREY_BLACK2 = '#BFC4C9',
+    GREY_BLACK3 = '#EBEBEB',
+    GREY_BLACK4 = '#F9F9FA',
+    WARNING = '#FFBC1F',
+    RED = '#F42C4F',
+    TRANSPARANT_ORANGE = '#FEEBEA',
+    BUTTON_BG = 'linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%)',
+    BUTTON_BG_HOVER = 'linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%)',
+}
