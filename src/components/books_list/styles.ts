@@ -1,22 +1,19 @@
 import styled from "styled-components";
+import { ListStyle } from "../../types";
 import { Media } from "../../ui";
 
-const StyledBooksList = styled.div<{ $display: boolean }>`
-  display: grid;
-  grid-template-columns: ${({ $display }) => ($display ? 'auto' : 'repeat(4,1fr)')};
-  grid-column-gap: 21px;
-  grid-row-gap: ${({ $display }) => ($display ? '15px' : '25px')};
-  ${Media.MD} {
-    grid-template-columns: ${({ $display }) => ($display ? 'auto' : 'repeat(3,1fr)')};
-  }
-  ${Media.LG} {
-    grid-template-columns: ${({ $display }) => ($display ? 'auto' : 'repeat(3,1fr)')};
-  }
-  ${Media.SM} {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: ${({ $display }) => ($display ? 'none' : 'none')};
-  }
+const StyledBooksList = styled.ul<{ $listStyle: ListStyle }>`
+display: grid;
+grid-template-columns: ${({ $listStyle }) =>
+  $listStyle === 'window' ? 'repeat(auto-fill, minmax(190px,1fr))' : '1fr'};
+align-items: center;
+grid-column-gap: 22px;
+grid-row-gap: 24px;
+${Media.SM} {
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
 `;
 
 export { StyledBooksList };

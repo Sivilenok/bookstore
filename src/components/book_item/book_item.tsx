@@ -1,35 +1,31 @@
-import { bookImage, CatIcon } from "../../assets";
-import { IBook } from "../../types"
+import { generatePath, Link, useNavigate } from "react-router-dom";
+import { Book } from "../../assets";
+import { ROUTE } from "../../router";
+import { IBook, ListStyle } from "../../types"
 import { Button } from "../button/button";
-import { BookDesc, BookImage, BookTitle, Rating, StyledBookItem, SubTitle } from "./styles";
+import { BookDesc, BookImage, BookTitle, Figure, Rating, StyledBookItem, SubTitle, Wrapper } from "./styles";
 
 interface Props {
-  $view: boolean;
+  listStyle: ListStyle;
   book: IBook;
 }
 
-export const BookItem = ({$view, book}: Props) => {
-  const { image, title, author, rating } = book;
-  
+export const BookItem = ({listStyle, book}: Props) => {
+  const { id, title, author, rating, category} = book;
+  const navigate = useNavigate();
+
   return (
-    // @ts-ignore
-    <StyledBookItem>
-      {image ? <BookImage $view={$view} src={bookImage} alt={title} /> : <CatIcon />}
-      {$view ? (
+    <StyledBookItem $listStyle={listStyle} data-test-id='card' onClick={() => navigate(generatePath(ROUTE.DETAILS, {id}))}>
+       <Figure>
+         <BookImage src={Book} alt={title}/>
+       </Figure>
         <BookDesc>
-          <BookTitle>{title}</BookTitle>
           <SubTitle>{author}</SubTitle>
           <Rating stars={rating} />
-          <Button title='Забронировать' width="" padding="" margin="" borderRadius="" />
         </BookDesc>
-      ) : (
-        <BookDesc>
-          <Rating stars={rating} />
-          <BookTitle>{title}</BookTitle>
-          <SubTitle>{author}</SubTitle>
+        <Link to={generatePath(ROUTE.ROOT + ROUTE.DETAILS, {category, id })}/>
+        <BookTitle as={listStyle === 'list' ? 'h5' : 'p'} $listStyle={listStyle}>{title}</BookTitle>
           <Button title='Забронировать' width={""} padding={""} margin={""} borderRadius={""} />
-        </BookDesc>
-      )}
     </StyledBookItem>
   )
 }

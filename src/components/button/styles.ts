@@ -10,7 +10,7 @@ interface Props {
 }
 
 const StyledButton = styled.button<Props>`
-  width: ${({ width }) => (width ? width : null)};
+  width: ${({ width }) => (width ? width : '174px')};
   padding: ${({ padding }) => (padding ? padding : "11px 23px")};
   margin: ${({ margin }) => (margin ? margin : null)};
   border-radius: ${({ borderRadius }) =>

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { BurgerMenuIcon } from "../../assets";
+import { COLOR } from "../../config";
 import { Media, typography } from "../../ui";
 
 const LogoIcon = styled.img`
@@ -35,4 +37,19 @@ const AvatarText = styled.div`
   padding: 0 16px;
 `;
 
-export { LogoIcon, StyledHeader, Title, AvatarText, AvatarIcon, AvatarWrapper };
+const StyledBurgerMenuIcon = styled(BurgerMenuIcon)`
+  cursor: pointer;
+  & path {
+    fill: ${COLOR.DARK};
+  }
+`;
+
+export {
+  LogoIcon,
+  StyledHeader,
+  Title,
+  AvatarText,
+  AvatarIcon,
+  AvatarWrapper,
+  StyledBurgerMenuIcon,
+};

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Media } from "./media";
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -8,4 +9,11 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-row-gap: 42px;
+  ${Media.MD} {
+    width: 640px;
+    padding-top: 0;
+  }
+  ${Media.SM} {
+    width: calc(100% - 30px);
+  }
 `;

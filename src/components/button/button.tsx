@@ -2,7 +2,7 @@ import { StyledButton } from "./styles";
 
 interface Props {
     title: string ;
-    width: string;
+    width?: string;
     padding: string;
     margin: string;
     borderRadius: string;
