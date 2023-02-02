@@ -3,7 +3,7 @@ import { Book } from "../../assets";
 import { ROUTE } from "../../router";
 import { IBook, ListStyle } from "../../types"
 import { Button } from "../button/button";
-import { BookDesc, BookImage, BookTitle, Figure, Rating, StyledBookItem, SubTitle, Wrapper } from "./styles";
+import { BookDesc, BookImage, BookTitle, Figure, Rating, StyledBookItem, SubTitle } from "./styles";
 
 interface Props {
   listStyle: ListStyle;

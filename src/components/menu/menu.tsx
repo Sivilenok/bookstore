@@ -1,6 +1,5 @@
 import { ROUTE } from "../../router";
 import { Border, LinksWrapper, MenuItem, MenuLink, MenuTitle, MenuWrapper } from "./styles";
-import { Link } from 'react-router-dom';
 
 
 export const Menu = () => (

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, PathMatch } from "react-router-dom";
 import styled from "styled-components";
 import { COLOR } from "../../config";
 import { typography } from "../../ui";
@@ -59,10 +59,11 @@ const MenuLink = styled(Link)`
   }
 `;
 
+
 const Border = styled.div`
   height: 1px;
   margin-bottom: 16px;
   background: ${COLOR.BUTTON_BG_HOVER};
 `;
 
-export { MenuWrapper, MenuTitle, MenuItem, LinksWrapper, Border, MenuLink };
+export {MenuLink, MenuWrapper, MenuTitle, MenuItem, LinksWrapper, Border };

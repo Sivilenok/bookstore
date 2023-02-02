@@ -74,14 +74,6 @@ const Figure = styled.figure`
   grid-area: imageBook;
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  ${Media.SM} {
-    justify-content: center;
-  }
-  grid-area: imageBook;
-`;
-
 
 const BookDesc = styled.div`
   display: flex;
@@ -122,4 +114,4 @@ const Rating = styled.div<Props>`
   justify-content: space-between;
 `;
 
-export { windowStyles, listStyles, Figure, Wrapper,StyledBookItem, BookImage, Rating, BookDesc, BookTitle, SubTitle };
+export { windowStyles, listStyles, Figure, StyledBookItem, BookImage, Rating, BookDesc, BookTitle, SubTitle };
