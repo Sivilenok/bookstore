@@ -39,6 +39,7 @@ const ReviewsNumber = styled.span`
 `;
 
 export {
+  StyledReviewCard,
   ReviewsNumber,
   ReviewsTitle,
   ReviewsWrapper,
